@@ -1,21 +1,24 @@
-import Image from "next/image";
-import Header from "./Components/Header";
+// pages/index.js
+
+import EMenu from "./Components/E-menu";
 import Footer from "./Components/Footer";
-import Contact from "./Components/Contact";
-import CategoryCard from "./Components/CategoryCard";
-import Themes from "./Components/Themes";
-import Land from "./Components/Land";
+import Hero from "./Components/Hero";
+import Materials from "./Components/Meterials";
+import Navbar from "./Components/Navbar";
+import NFCCards from "./Components/NFCCards";
+import RealEstate from "./Components/Realestate";
+
 
 export default function Home() {
   return (
-   <>
-   <Header/>
-   <Land/>
-   <Themes/>
-   <CategoryCard/>
-   <Contact/>
-
-   <Footer/>
-   </>
+    <div>
+    
+      <Hero />
+      <NFCCards />
+      <EMenu />
+      <RealEstate/>
+      <Materials />
+    
+    </div>
   );
 }
