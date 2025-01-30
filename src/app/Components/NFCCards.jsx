@@ -15,10 +15,10 @@ export default function MaterialsSection() {
   }, []);
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-8">
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl text-black font-bold text-center mb-12" data-aos="fade-up">
-          Why Choose TapX NFC Cards?
+          Why Choose TapX?
         </h2>
 
         {/* Card Layout */}
@@ -75,46 +75,49 @@ export default function MaterialsSection() {
           </div>
         </div>
 
-       {/* How It Works Section */}
-<div className="mt-16 bg-gray-900 py-12 rounded-lg">
-  <h3 className="text-2xl font-semibold text-center text-white mb-8">How It Works</h3>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-12">
+
+
+ {/* How It Works Section */}
+<div className="mt-16 bg-gray-900 py-8 sm:py-12 rounded-lg">
+  <h3 className="text-2xl font-semibold text-center text-white mb-6 sm:mb-12">How It Works</h3>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 md:px-12">
     
     {/* Step 1: Choose Material */}
-    <div className="bg-gray-800 p-8 rounded-lg shadow-md text-center relative">
-      <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black text-lg font-bold w-12 h-12 flex items-center justify-center rounded-full">
+    <div className="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-md text-center relative">
+      <span className="absolute -top-4 sm:-top-5 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black text-lg font-bold w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center rounded-full">
         1
       </span>
-      <h4 className="text-xl font-semibold mb-4 text-white mt-6">Choose Material</h4>
-      <p className="text-gray-300">
+      <h4 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white mt-5 sm:mt-6">Choose Material</h4>
+      <p className="text-gray-300 text-sm sm:text-base">
         Select from a range of high-quality materials that suit your style and needs. We offer PVC, Platinum, Wood, and more.
       </p>
     </div>
 
     {/* Step 2: Approve Design */}
-    <div className="bg-gray-800 p-8 rounded-lg shadow-md text-center relative">
-      <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black text-lg font-bold w-12 h-12 flex items-center justify-center rounded-full">
+    <div className="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-md text-center relative">
+      <span className="absolute -top-4 sm:-top-5 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black text-lg font-bold w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center rounded-full">
         2
       </span>
-      <h4 className="text-xl font-semibold mb-4 text-white mt-6">Approve Design</h4>
-      <p className="text-gray-300">
+      <h4 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white mt-5 sm:mt-6">Approve Design</h4>
+      <p className="text-gray-300 text-sm sm:text-base">
         Review and finalize the design of your smart card before production. Customize it as per your brand’s needs.
       </p>
     </div>
 
     {/* Step 3: Get Your Card */}
-    <div className="bg-gray-800 p-8 rounded-lg shadow-md text-center relative">
-      <span className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black text-lg font-bold w-12 h-12 flex items-center justify-center rounded-full">
+    <div className="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-md text-center relative">
+      <span className="absolute -top-4 sm:-top-5 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black text-lg font-bold w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center rounded-full">
         3
       </span>
-      <h4 className="text-xl font-semibold mb-4 text-white mt-6">Get Your Card</h4>
-      <p className="text-gray-300">
+      <h4 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white mt-5 sm:mt-6">Get Your Card</h4>
+      <p className="text-gray-300 text-sm sm:text-base">
         Once your card is ready, collect it in-person or have it delivered to your location. Enjoy your new smart card!
       </p>
     </div>
 
   </div>
 </div>
+
 
       </div>
     </section>

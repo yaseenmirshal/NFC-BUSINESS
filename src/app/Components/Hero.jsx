@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-8">
         {/* Text on the Left */}
         <div
-          className="text-left max-w-2xl mb-8 md:mt-0  mt-52 md:mb-0"
+          className="text-left max-w-2xl mb-8 md:mt-0  mt-[-140px] md:mb-0"
           data-aos="fade-up"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">
@@ -29,7 +29,7 @@ export default function Hero() {
           </p>
 
           {/* Buttons */}
-          <div className="w-full flex flex-wrap justify-center md:justify-start gap-4 md:gap-6">
+          <div className="w-full flex flex-wrap justify-start gap-4 md:gap-6">
             <button className="bg-gray-900 text-white px-6 md:px-8 py-3 md:py-4 text-lg w-auto whitespace-nowrap hover:bg-gray-700 transition">
               Buy Now
             </button>
@@ -40,7 +40,7 @@ export default function Hero() {
         </div>
 
 {/* Image on the Right */}
-<div className="relative max-w-xl md:max-w-1xl w-full" data-aos="fade-left">
+<div className="absolute mt-28 md:mt-16 md:ml-[650px] max-w-xl md:max-w-1xl w-full" data-aos="fade-left">
   <img
     src="./cardss.png"
     alt="Angle 6 Metal"

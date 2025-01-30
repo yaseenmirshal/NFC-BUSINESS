@@ -16,8 +16,8 @@ export default function Home() {
       <Hero />
       <Materials />
       <NFCCards />
-      <EMenu />
-      <RealEstate/>
+      {/* <EMenu /> */}
+      {/* <RealEstate/> */}
       
     
     </div>
