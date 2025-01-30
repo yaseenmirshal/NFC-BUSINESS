@@ -14,10 +14,11 @@ export default function Home() {
     <div>
     
       <Hero />
+      <Materials />
       <NFCCards />
       <EMenu />
       <RealEstate/>
-      <Materials />
+      
     
     </div>
   );
