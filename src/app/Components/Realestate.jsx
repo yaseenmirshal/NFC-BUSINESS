@@ -1,22 +1,119 @@
-// components/RealEstate.js
-export default function RealEstate() {
-    return (
-      <section id="real-estate" className="py-20 bg-gray-50">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12" data-aos="fade-up">Real Estate Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-6 bg-white rounded-lg shadow-md" data-aos="fade-up">
-              <img src="https://via.placeholder.com/400x300" alt="Real Estate" className="w-full mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Property Showcase</h3>
-              <p className="text-gray-600">Showcase properties with NFC-enabled brochures.</p>
+// components/SectorThemes.js
+'use client';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // AOS CSS
+import { FaUtensils, FaBuilding, FaBriefcase, FaArrowRight } from 'react-icons/fa'; // Icons for sectors
+
+export default function SectorThemes() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4 md:mb-0 mb-[-70px]">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mt-0 md:mt-14 text-gray-800 mb-5" data-aos="fade-up">
+          Explore Our Solutions
+        </h2>
+        <p className="text-lg md:text-xl text-gray-600 text-center md:mb-16 mb-7" data-aos="fade-up" data-aos-delay="100">
+          Tailored solutions for every industry. Discover how we can transform your business.
+        </p>
+
+        {/* Grid Layout for Sectors */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+           {/* Business Portfolio Card */}
+           <div
+            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="bg-gradient-to-r from-orange-500 to-red-600 p-4 rounded-full">
+                <FaBriefcase className="text-4xl text-white" />
+              </div>
             </div>
-            <div className="p-6 bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
-              <img src="https://via.placeholder.com/400x300" alt="Real Estate" className="w-full mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Virtual Tours</h3>
-              <p className="text-gray-600">Offer virtual tours with NFC technology.</p>
-            </div>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Business Portfolios</h3>
+            <p className="text-gray-600 mb-6">
+              Elevate your professional image with NFC-enabled business cards and digital portfolios.
+            </p>
+            <a
+              href="#"
+              className="flex items-center text-orange-600 hover:text-orange-700 transition-all"
+            >
+              Learn More <FaArrowRight className="ml-2" />
+            </a>
           </div>
+
+          {/* E-Menu Card */}
+          <div
+            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-full">
+                <FaUtensils className="text-4xl text-white" />
+              </div>
+            </div>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">E-Menu Solutions</h3>
+            <p className="text-gray-600 mb-6">
+              Revolutionize your restaurant with digital menus. Enhance customer experience and streamline operations.
+            </p>
+            <a
+              href="#"
+              className="flex items-center text-blue-600 hover:text-blue-700 transition-all"
+            >
+              Learn More <FaArrowRight className="ml-2" />
+            </a>
+          </div>
+
+          {/* Real Estate Card */}
+          <div
+            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="bg-gradient-to-r from-green-500 to-teal-600 p-4 rounded-full">
+                <FaBuilding className="text-4xl text-white" />
+              </div>
+            </div>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Real Estate Solutions</h3>
+            <p className="text-gray-600 mb-6">
+              Showcase properties with immersive virtual tours and smart NFC-based property cards.
+            </p>
+            <a
+              href="#"
+              className="flex items-center text-green-600 hover:text-green-700 transition-all"
+            >
+              Learn More <FaArrowRight className="ml-2" />
+            </a>
+          </div>
+
+         
         </div>
-      </section>
-    );
-  }
+
+        {/* Call-to-Action Section
+        <div className="mt-16 text-center" data-aos="fade-up" data-aos-delay="800">
+          <h3 className="text-3xl font-bold text-gray-800 mb-6">
+            Ready to Transform Your Business?
+          </h3>
+          <p className="text-gray-600 mb-8">
+            Contact us today to get started with our innovative solutions.
+          </p>
+          <button
+            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105"
+          >
+            Get Started Now
+          </button>
+        </div> */}
+      </div>
+    </section>
+  );
+}

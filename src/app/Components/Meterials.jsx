@@ -66,7 +66,7 @@ export default function NFCMaterials() {
               />
               <div className="absolute inset-0 bg-black bg-opacity-10 hover:bg-opacity-0 transition-all duration-300"></div>
             </div>
-            <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Platinum</h3>
+            <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Aluminium</h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
               Premium and scratch-resistant. Great for high-end memberships.
             </p>
@@ -99,23 +99,7 @@ export default function NFCMaterials() {
           </div>
         </div>
 
-        {/* Additional Animated Element */}
-        <div
-          className="mt-12 text-gray-300 text-center"
-          data-aos="fade-up"
-          data-aos-delay="800"
-        >
-          <p className="text-lg md:text-xl mb-4">
-            🚀 Ready to transform your business? Choose your material today!
-          </p>
-          <button
-            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105"
-            data-aos="fade-up"
-            data-aos-delay="1000"
-          >
-            Get Started Now
-          </button>
-        </div>
+        
       </div>
     </section>
   );

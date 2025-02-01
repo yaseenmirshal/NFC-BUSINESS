@@ -17,7 +17,7 @@ export default function MaterialsSection() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl text-black font-bold text-center mb-16" data-aos="fade-up">
+        <h2 className="text-3xl md:text-5xl text-black font-bold text-center mb-14 md:mb-16" data-aos="fade-up">
           Why Choose TapX?
         </h2>
 
