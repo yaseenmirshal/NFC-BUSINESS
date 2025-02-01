@@ -52,7 +52,7 @@ export default function Hero() {
               <span className="text-gray-200">Rated 4.9/5</span>
             </div>
             <div className="hidden md:block text-gray-200">|</div>
-            <div className="text-gray-200">Trusted by 10,000+ businesses</div>
+            <div className="text-gray-200">Trusted by 1000+ businesses</div>
           </div>
         </div>
 
