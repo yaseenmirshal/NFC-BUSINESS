@@ -1,8 +1,8 @@
-'use client'
+'use client';
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // AOS CSS
-import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa'; // Importing icons
+import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa'; // Importing icons
 
 export default function Footer() {
   useEffect(() => {
@@ -10,20 +10,23 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-gray-900 text-white py-12 px-6">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-gray-900 text-white py-16 px-6">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Contact Info */}
         <div data-aos="fade-up" data-aos-delay="100">
-          <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
-          <p className="text-gray-400 mb-2">Email: contact@yourdomain.com</p>
-          <p className="text-gray-400 mb-2">Phone: +1 (555) 123-4567</p>
+          <h4 className="text-xl font-semibold mb-6">Contact Us</h4>
+          <p className="text-gray-400 mb-4 flex items-center gap-2">
+            <FaEnvelope className="text-yellow-500" />
+            <span>contact@yourdomain.com</span>
+          </p>
+          <p className="text-gray-400 mb-4">Phone: +1 (555) 123-4567</p>
           <p className="text-gray-400">Address: 123 Business St, City, Country</p>
         </div>
 
         {/* Quick Links */}
-        <div data-aos="fade-up" data-aos-delay="300">
-          <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
-          <ul className="space-y-2">
+        <div data-aos="fade-up" data-aos-delay="200">
+          <h4 className="text-xl font-semibold mb-6">Quick Links</h4>
+          <ul className="space-y-3">
             <li>
               <a
                 href="#"
@@ -60,9 +63,9 @@ export default function Footer() {
         </div>
 
         {/* Social Media */}
-        <div data-aos="fade-up" data-aos-delay="500">
-          <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
-          <div className="flex gap-6 justify-start md:justify-start">
+        <div data-aos="fade-up" data-aos-delay="300">
+          <h4 className="text-xl font-semibold mb-6">Follow Us</h4>
+          <div className="flex gap-6">
             <a
               href="https://www.instagram.com/yourusername"
               target="_blank"
@@ -97,12 +100,33 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
+        {/* Subscribe Section */}
+        <div data-aos="fade-up" data-aos-delay="300">
+          <h4 className="text-xl font-semibold mb-6">Subscribe</h4>
+          <p className="text-gray-400 mb-4">
+            Stay updated with our latest news and offers.
+          </p>
+          <form className="flex flex-col gap-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full px-4 py-2 rounded-md bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            />
+            <button
+              type="submit"
+              className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-6 py-2 rounded-md hover:from-yellow-600 hover:to-yellow-700 transition-all transform hover:scale-105"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
       </div>
 
       {/* Footer Bottom Section */}
-      <div className="mt-8 border-t border-gray-700 pt-4">
+      <div className="mt-12 border-t border-gray-800 pt-8">
         <p className="text-gray-400 text-center">
-          &copy; {new Date().getFullYear()} YourCompanyName. All rights reserved.
+          &copy; {new Date().getFullYear()} TapX. All rights reserved.
         </p>
       </div>
     </footer>

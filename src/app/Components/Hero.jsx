@@ -1,5 +1,5 @@
 // components/Hero.js
-'use client'
+'use client';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // AOS CSS
@@ -7,49 +7,88 @@ import 'aos/dist/aos.css'; // AOS CSS
 export default function Hero() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Optional: adjust the animation speed
+      duration: 1000,
       easing: 'ease-in-out',
-      once: true, // Make the animation happen only once
+      once: true,
     });
   }, []);
 
   return (
-    <section className="h-screen flex items-center justify-center bg-white">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-8">
+    <section className="h-[1000px] md:h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 relative overflow-hidden pt-20 md:pt-0">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 left-0 w-20 h-20 bg-white rounded-full opacity-10 animate-float"></div>
+        <div className="absolute top-1/4 right-0 w-32 h-32 bg-white rounded-full opacity-10 animate-float-delay"></div>
+        <div className="absolute bottom-0 left-1/4 w-24 h-24 bg-white rounded-full opacity-10 animate-float"></div>
+      </div>
+
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-8 relative z-10">
         {/* Text on the Left */}
         <div
-          className="text-left max-w-2xl mb-8 md:mt-0  mt-[-140px] md:mb-0"
+          className="text-left max-w-2xl  mb-8 md:mb-0 md:mt-0"
           data-aos="fade-up"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">
-            Empower Your<br/> Business with TapX
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Empower Your<br /> Business with <span className="text-yellow-300">TapX</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 mb-8">
-            Smart, secure, and seamless solutions for the future.
+          <p className="text-lg md:text-xl text-gray-200 mb-8">
+            Smart, secure, and seamless solutions for the future. Transform your business with cutting-edge technology.
           </p>
 
           {/* Buttons */}
-          <div className="w-full flex flex-wrap justify-start gap-4 md:gap-6">
-            <button className="bg-gray-900 text-white px-6 md:px-8 py-3 md:py-4 text-lg w-auto whitespace-nowrap hover:bg-gray-700 transition">
+          <div className="w-full flex flex-col md:flex-row flex-wrap justify-start gap-4 md:gap-6">
+            <button className="bg-yellow-300 text-gray-900 px-6 py-3 md:px-8 md:py-4 text-lg font-semibold rounded-lg hover:bg-yellow-400 transition-transform transform hover:scale-105 whitespace-nowrap">
               Buy Now
             </button>
-            <button className="border border-gray-900 text-gray-900 px-6 md:px-8 py-3 md:py-4 text-lg w-auto whitespace-nowrap hover:bg-gray-900 hover:text-white transition">
+            <button className="border border-yellow-300 text-yellow-300 px-6 py-3 md:px-8 md:py-4 text-lg font-semibold rounded-lg hover:bg-yellow-300 hover:text-gray-900 transition-transform transform hover:scale-105 whitespace-nowrap">
               How It Works
             </button>
           </div>
+
+          {/* Additional Information */}
+          <div className="mt-8 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
+            <div className="flex items-center space-x-2">
+              <span className="text-white text-lg">⭐️⭐️⭐️⭐️⭐️</span>
+              <span className="text-gray-200">Rated 4.9/5</span>
+            </div>
+            <div className="hidden md:block text-gray-200">|</div>
+            <div className="text-gray-200">Trusted by 10,000+ businesses</div>
+          </div>
         </div>
 
-{/* Image on the Right */}
-<div className="absolute mt-28 md:mt-16 md:ml-[650px] max-w-xl md:max-w-1xl w-full" data-aos="fade-left">
-  <img
-    src="./cardss.png"
-    alt="Angle 6 Metal"
-    className="rounded-lg w-full h-auto"
-  />
+        {/* Image on the Right */}
+        <div
+          className="relative w-full max-w-xl md:max-w-2xl mt-[-20px] md:mt-0"
+          data-aos="fade-left"
+        >
+          <img
+            src="./cardss.png"
+            alt="Angle 6 Metal"
+            className="rounded-lg w-full h-auto transform hover:scale-105 transition-transform"
+          />
+          {/* Animated Badge */}
+          <div className="absolute -bottom-8 -right-8 bg-white p-4 rounded-lg shadow-lg animate-bounce hidden md:block">
+            <span className="text-gray-900 font-semibold">🚀 New Feature!</span>
+          </div>
+        </div>
+      </div>
 
-</div>
-
-
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-8 w-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
+          />
+        </svg>
       </div>
     </section>
   );
