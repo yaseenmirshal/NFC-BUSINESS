@@ -10,7 +10,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-gray-900 text-white py-16 px-6">
+    <footer className="bg-black text-white py-16 px-6">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Contact Info */}
         <div data-aos="fade-up" data-aos-delay="100">

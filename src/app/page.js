@@ -1,4 +1,3 @@
-// pages/index.js
 
 import EMenu from "./Components/E-menu";
 import Footer from "./Components/Footer";
@@ -10,18 +9,19 @@ import RealEstate from "./Components/Realestate";
 
 
 export default function Home() {
-  return (
-    <div>
-    
-      <Hero />
-      <Materials />
-      <RealEstate/>
-      <NFCCards />
+  
 
-      {/* <EMenu /> */}
-    
+  return (
+    <>
       
-    
-    </div>
+         
+          <Hero />
+          <Materials />
+          <RealEstate />
+          <NFCCards />
+          {/* <EMenu /> */}
+        
+        
+    </>
   );
 }

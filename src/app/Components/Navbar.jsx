@@ -26,7 +26,7 @@ export default function Navbar() {
         </button>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 mr-5">
           {menuItems.map(({ href, label }) => (
             <Link
               key={href}
@@ -37,6 +37,8 @@ export default function Navbar() {
               <span className="absolute left-0 bottom-0 h-0.5 bg-black w-0 group-hover:w-full transition-all duration-300"></span>
             </Link>
           ))}
+
+         
         </div>
       </div>
 
@@ -62,6 +64,7 @@ export default function Navbar() {
 
 // Menu items
 const menuItems = [
+  { href: "#about", label: "About Us" },
   { href: "#nfc-cards", label: "NFC Cards" },
   { href: "#e-menu", label: "E-Menu" },
   { href: "#real-estate", label: "Real Estate" },

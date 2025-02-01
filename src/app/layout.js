@@ -1,11 +1,14 @@
-// app/layout.js
-import localFont from "next/font/local"; // Import localFont
-import { Sora } from 'next/font/google'; // Import the Sora font
-import "./globals.css"; // Import your global CSS
+// RootLayout.js
+'use client';
+import { useState, useEffect } from "react";
+import localFont from "next/font/local";
+import { Sora } from "next/font/google";
+import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import Loading from "./Components/Loading";
+import { metadata } from "./metadata"; // Import metadata
 
-// Load local fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -16,27 +19,36 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
-// Load the Sora font
 const sora = Sora({
-  subsets: ['latin'], // Specify the subsets you need
-  weights: ['100', '400', '600', '800'], // Specify the font weights you want to use
+  subsets: ["latin"],
+  weight: ["100", "400", "600", "800"],
 });
 
-export const metadata = {
-  title: "TapX",
-  description: "Elevate Your Networking",
-};
-
 export default function RootLayout({ children }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // Loading duration
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${sora.className} antialiased`} // Add Sora class here
+        className={`${geistSans.variable} ${geistMono.variable} ${sora.className} antialiased`}
       >
-        <Navbar />
-        {children}
-        <Footer/>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <>
+            <Navbar />
+            {children}
+            <Footer />
+          </>
+        )}
       </body>
     </html>
   );
