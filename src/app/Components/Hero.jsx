@@ -62,12 +62,12 @@ export default function Hero() {
           data-aos="fade-left"
         >
           <img
-            src="./cardss.png"
+            src="./nfchd.png"
             alt="Angle 6 Metal"
             className="rounded-lg w-full h-auto transform hover:scale-105 transition-transform"
           />
           {/* Animated Badge */}
-          <div className="absolute -bottom-8 -right-8 bg-white p-4 rounded-lg shadow-lg animate-bounce hidden md:block">
+          <div className="absolute -bottom-36 -right-8 bg-white p-4 rounded-lg shadow-lg animate-bounce hidden md:block">
             <span className="text-gray-900 font-semibold">🚀 New Feature!</span>
           </div>
         </div>
