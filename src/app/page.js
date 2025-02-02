@@ -19,6 +19,7 @@ export default function Home() {
           <Materials />
           <RealEstate />
           <NFCCards />
+         
           {/* <EMenu /> */}
         
         

@@ -1,4 +1,3 @@
-// RootLayout.js
 'use client';
 import { useState, useEffect } from "react";
 import localFont from "next/font/local";
@@ -37,6 +36,12 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="author" content={metadata.author} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${sora.className} antialiased`}
       >

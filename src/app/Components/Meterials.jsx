@@ -1,14 +1,18 @@
 // components/NFCMaterials.js
-'use client';
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // AOS CSS
+"use client";
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useRouter } from "next/navigation"; // ✅ Correct import for Next.js App Router
 
 export default function NFCMaterials() {
+  const router = useRouter(); // ✅ Move useRouter outside useEffect
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      easing: 'ease-in-out',
+      easing: "ease-in-out",
       once: true,
     });
   }, []);
@@ -47,7 +51,11 @@ export default function NFCMaterials() {
             <p className="text-gray-600 mb-4 text-sm md:text-base">
               Flexible and waterproof. Ideal for events and loyalty programs.
             </p>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-2 rounded-md hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105">
+
+            <button
+              onClick={() => router.push("/Routes/Purchase")} // ✅ Now it works correctly
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-2 rounded-md hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105"
+            >
               <b>50 AED</b> - Learn more
             </button>
           </div>
@@ -70,8 +78,11 @@ export default function NFCMaterials() {
             <p className="text-gray-600 mb-4 text-sm md:text-base">
               Premium and scratch-resistant. Great for high-end memberships.
             </p>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-2 rounded-md hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105">
-             <b> 150 AED</b> - Learn more 
+            <button
+              onClick={() => router.push("/Routes/Purchase")}
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-2 rounded-md hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105"
+            >
+              <b>150 AED</b> - Learn more
             </button>
           </div>
 
@@ -93,13 +104,14 @@ export default function NFCMaterials() {
             <p className="text-gray-600 mb-4 text-sm md:text-base">
               Eco-friendly and elegant. Perfect for personalized branding.
             </p>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-2 rounded-md hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105">
-             <b>170 AED</b>  - Learn more
+            <button
+              onClick={() => router.push("/Routes/Purchase")}
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-2 rounded-md hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105"
+            >
+              <b>170 AED</b> - Learn more
             </button>
           </div>
         </div>
-
-        
       </div>
     </section>
   );
