@@ -14,7 +14,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="h-[1000px] md:h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 relative overflow-hidden pt-20 md:pt-0">
+    <section className="h-[1000px] md:h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800 relative overflow-hidden pt-20 md:pt-0">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-20 h-20 bg-white rounded-full opacity-10 animate-float"></div>
@@ -25,22 +25,19 @@ export default function Hero() {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-8 relative z-10">
         {/* Text on the Left */}
         <div
-          className="text-left max-w-2xl  mb-8 md:mb-0 md:mt-0"
+          className="text-left max-w-2xl mb-8 md:mb-0 md:mt-0"
           data-aos="fade-up"
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Empower Your<br /> Business with <span className="text-yellow-300">TapX</span>
+            Empower Your<br /> Business with <span className="text-teal-400">TapX</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-8">
+          <p className="text-lg md:text-xl text-gray-300 mb-8">
             Smart, secure, and seamless solutions for the future. Transform your business with cutting-edge technology.
           </p>
 
           {/* Buttons */}
           <div className="w-full flex flex-col md:flex-row flex-wrap justify-start gap-4 md:gap-6">
-            <button className="bg-yellow-300 text-gray-900 px-6 py-3 md:px-8 md:py-4 text-lg font-semibold rounded-lg hover:bg-yellow-400 transition-transform transform hover:scale-105 whitespace-nowrap">
-              Buy Now
-            </button>
-            <button className="border border-yellow-300 text-yellow-300 px-6 py-3 md:px-8 md:py-4 text-lg font-semibold rounded-lg hover:bg-yellow-300 hover:text-gray-900 transition-transform transform hover:scale-105 whitespace-nowrap">
+            <button className="bg-teal-400 text-gray-900 px-6 py-3 md:px-8 md:py-4 text-lg font-semibold rounded-lg hover:bg-teal-500 transition-transform transform hover:scale-105 whitespace-nowrap">
               How It Works
             </button>
           </div>
@@ -49,10 +46,10 @@ export default function Hero() {
           <div className="mt-8 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
             <div className="flex items-center space-x-2">
               <span className="text-white text-lg">⭐️⭐️⭐️⭐️⭐️</span>
-              <span className="text-gray-200">Rated 4.9/5</span>
+              <span className="text-gray-300">Rated 4.9/5</span>
             </div>
-            <div className="hidden md:block text-gray-200">|</div>
-            <div className="text-gray-200">Trusted by 1000+ businesses</div>
+            <div className="hidden md:block text-gray-300">|</div>
+            <div className="text-gray-300">Trusted by 1000+ businesses</div>
           </div>
         </div>
 

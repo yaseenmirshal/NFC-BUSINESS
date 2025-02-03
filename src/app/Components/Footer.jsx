@@ -11,11 +11,11 @@ export default function Footer() {
 
   return (
     <footer className="bg-black text-white py-16 px-6">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
         {/* Contact Info */}
         <div data-aos="fade-up" data-aos-delay="100">
           <h4 className="text-xl font-semibold mb-6">Contact Us</h4>
-          <p className="text-gray-400 mb-4 flex items-center gap-2">
+          <p className="text-gray-400 mb-4 flex items-center justify-center md:justify-start gap-2">
             <FaEnvelope className="text-yellow-500" />
             <span>contact@yourdomain.com</span>
           </p>
@@ -65,7 +65,7 @@ export default function Footer() {
         {/* Social Media */}
         <div data-aos="fade-up" data-aos-delay="300">
           <h4 className="text-xl font-semibold mb-6">Follow Us</h4>
-          <div className="flex gap-6">
+          <div className="flex gap-6 justify-center md:justify-start">
             <a
               href="https://www.instagram.com/yourusername"
               target="_blank"
@@ -107,7 +107,7 @@ export default function Footer() {
           <p className="text-gray-400 mb-4">
             Stay updated with our latest news and offers.
           </p>
-          <form className="flex flex-col gap-4">
+          <form className="flex flex-col gap-4 items-center md:items-start">
             <input
               type="email"
               placeholder="Enter your email"
