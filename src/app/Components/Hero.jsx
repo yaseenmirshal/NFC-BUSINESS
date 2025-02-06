@@ -14,7 +14,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="h-[1000px] md:h-screen flex items-center justify-center bg-gradient-to-r from-gray-50 to-gray-100 relative overflow-hidden pt-20 md:pt-0">
+    <section className="h-[850px] md:h-screen flex items-center justify-center bg-gradient-to-r from-gray-50 to-gray-100 relative overflow-hidden pt-20 md:pt-0">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-20 h-20 bg-teal-400 rounded-full opacity-20 animate-float"></div>
@@ -25,43 +25,43 @@ export default function Hero() {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-8 relative z-10">
         {/* Text on the Left */}
         <div
-          className="text-left max-w-2xl mb-8 md:mb-0 md:mt-0"
+          className="text-left mt-8 max-w-2xl mb-8 md:mb-0 md:mt-0"
           data-aos="fade-up"
         >
-      <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-  <span className="text-lg md:text-xl font-medium text-gray-600 uppercase tracking-widest">
-    Welcome to{" "}
-  </span>
-  <span className="text-lg md:text-xl font-medium text-teal-600 uppercase tracking-widest">
-    TapeX
-  </span>
-  <br />
-  Your Trusted NFC Card & Solution Provider
-</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <span className="text-lg md:text-xl font-medium text-gray-600 uppercase tracking-widest">
+              Welcome to{" "}
+            </span>
+            <span className="text-lg md:text-xl font-medium text-teal-600 uppercase tracking-widest">
+              TapeX
+            </span>
+            <br />
+            Your Trusted NFC Card & Solution Provider
+          </h1>
 
           <p className="text-lg md:text-xl text-gray-700 mb-8">
-          Revolutionize Your Business with NFC Technology
-
+            Revolutionize Your Business with NFC Technology
           </p>
 
           {/* Buttons */}
-          <div className="w-full flex flex-col md:flex-row flex-wrap justify-start gap-4 md:gap-6">
-            <button className="bg-teal-600 text-white px-6 py-3 md:px-8 md:py-4 text-lg font-semibold rounded-lg hover:bg-teal-700 transition-transform transform hover:scale-105 whitespace-nowrap">
+          <div className="w-full flex flex-row flex-wrap justify-start gap-4 md:gap-6">
+            <button className="bg-teal-600 text-white px-4 py-2 text-md font-semibold hover:bg-teal-700 transition-transform transform hover:scale-105">
+              Buy Now
+            </button>
+            <button className="border border-teal-600 text-teal-600 px-4 py-2 text-md font-semibold hover:bg-teal-600 hover:text-white transition-transform transform hover:scale-105">
               How It Works
             </button>
           </div>
 
           {/* Additional Information */}
           <div className="mt-8 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
-            
-            
             <div className="text-gray-700">Trusted by 1000+ businesses</div>
           </div>
         </div>
 
         {/* Image on the Right */}
         <div
-          className="relative w-full max-w-xl md:max-w-2xl mt-[-20px] md:mt-0"
+          className="relative w-full max-w-xl md:max-w-2xl md:mt-0"
           data-aos="fade-left"
         >
           <img
@@ -71,7 +71,7 @@ export default function Hero() {
           />
           {/* Animated Badge */}
           <div className="absolute -bottom-36 -right-8 bg-teal-600 p-4 rounded-lg shadow-lg animate-bounce hidden md:block">
-            <span className="text-white font-semibold">🚀 New Feature!</span>
+            <span className="text-white font-semibold"> New Feature!</span>
           </div>
         </div>
       </div>

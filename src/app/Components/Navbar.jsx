@@ -79,7 +79,5 @@ export default function Navbar() {
 const menuItems = [
   { href: "#about", label: "About Us" },
   { href: "#nfc-cards", label: "NFC Cards" },
-  { href: "#e-menu", label: "E-Menu" },
-  { href: "#real-estate", label: "Real Estate" },
   { href: "#materials", label: "Materials" },
 ];
