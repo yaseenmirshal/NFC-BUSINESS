@@ -8,25 +8,30 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] max-w-6xl bg-white/90 backdrop-blur-md z-50 shadow-lg rounded-xl border border-gray-200">
-      <div className="container mx-auto flex justify-between items-center p-4">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="text-xl font-bold text-black hover:text-gray-700 transition-colors duration-300"
-        >
-          TapX
+      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+        {/* Left: Logo */}
+        <Link href="/" className="text-xl font-bold text-black hover:text-gray-700 transition-colors duration-300">
+          TAPEX
         </Link>
 
-        {/* Mobile Menu Toggle Button */}
-        <button
-          className="md:hidden text-black hover:text-gray-700 transition-colors duration-300"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Menu Toggle + Get in Touch for Mobile */}
+        <div className="flex items-center md:hidden space-x-4">
+          <Link
+            href="#contact"
+            className="px-3 py-1.5 bg-teal-600 text-white text-sm font-medium rounded-lg hover:bg-teal-700 transition-all duration-300"
+          >
+            Get in Touch
+          </Link>
+          <button
+            className="text-black hover:text-gray-700 transition-colors duration-300"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 mr-5">
+        <div className="hidden md:flex space-x-8">
           {menuItems.map(({ href, label }) => (
             <Link
               key={href}
@@ -37,14 +42,22 @@ export default function Navbar() {
               <span className="absolute left-0 bottom-0 h-0.5 bg-black w-0 group-hover:w-full transition-all duration-300"></span>
             </Link>
           ))}
+        </div>
 
-         
+        {/* Right: Get in Touch Button (Desktop Only) */}
+        <div className="hidden md:block">
+          <Link
+            href="#contact"
+            className="px-4 py-2 bg-teal-600 text-white text-sm font-medium rounded-lg hover:bg-teal-700 transition-all duration-300"
+          >
+            Get in Touch
+          </Link>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md w-full absolute left-0 top-[100%] flex flex-col items-center py-4 space-y-4 shadow-lg rounded-b-xl">
+        <div className="md:hidden bg-white/95 backdrop-blur-md absolute left-0 top-[100%] w-full flex flex-col items-center py-4 space-y-4 shadow-lg rounded-b-xl">
           {menuItems.map(({ href, label }) => (
             <Link
               key={href}
