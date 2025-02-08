@@ -4,8 +4,11 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // AOS CSS
 import { FaUtensils, FaBuilding, FaBriefcase, FaArrowRight } from 'react-icons/fa'; // Icons for sectors
+import { useRouter } from 'next/navigation';
 
 export default function SectorThemes() {
+  const router = useRouter(); 
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -42,12 +45,12 @@ export default function SectorThemes() {
             <p className="text-gray-600 mb-6">
               Elevate your professional image with NFC-enabled business cards and digital portfolios.
             </p>
-            <a
-              href="#"
+            <button
+              onClick={() => router.push("/Routes/Business")}
               className="flex items-center text-orange-600 hover:text-orange-700 transition-all"
             >
               Learn More <FaArrowRight className="ml-2" />
-            </a>
+            </button>
           </div>
 
           {/* E-Menu Card */}
