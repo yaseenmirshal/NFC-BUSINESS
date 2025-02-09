@@ -13,7 +13,7 @@ export default function NFCBusinessPage() {
     <div className="bg-white text-gray-800 min-h-screen font-sans">
       {/* Hero Section */}
       <section className="flex flex-col items-center text-center py-20 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white" data-aos="fade-up">
-        <h1 className="text-5xl mt-20 font-extrabold mb-4">Reimagine Dining Experiences</h1>
+        <h1 className="text-3xl md:text-5xl mt-20 font-extrabold mb-4">Reimagine Dining Experiences</h1>
         <p className="text-lg max-w-2xl">Transform your restaurant with NFC-enabled e-menu solutions.</p>
       </section>
 

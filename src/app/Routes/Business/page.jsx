@@ -12,8 +12,8 @@ export default function NFCBusinessPage() {
     <div className="bg-white text-gray-800 min-h-screen">
       {/* Hero Section */}
       <section className="flex flex-col items-center text-center py-20 px-6 bg-gradient-to-r from-blue-600 to-blue-800 text-white" data-aos="fade-up">
-        <h1 className="text-5xl mt-20 font-bold mb-6">Personal Digital Business Cards</h1>
-        <p className="text-xl max-w-2xl mb-8">
+        <h1 className="text-3xl md:text-5xl mt-20 font-bold mb-6">Personal Digital Business Cards</h1>
+        <p className="text-lg md:text-xl max-w-2xl mb-8">
           Create lasting impressions with NFC-powered business cards. Share your details instantly, effortlessly, and sustainably.
         </p>
         <button className="bg-white text-blue-800 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition">

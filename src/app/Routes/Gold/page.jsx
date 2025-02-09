@@ -13,7 +13,7 @@ export default function GoldCategoryPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-600 to-yellow-800 text-white py-20">
         <div className="container mx-auto text-center" data-aos="fade-up">
-          <h1 className="text-5xl mt-20 font-bold mb-4">
+          <h1 className="text-3xl md:text-5xl mt-20 font-bold mb-4">
             Elevate Luxury Shopping with NFC Technology
           </h1>
           <p className="text-xl mb-8">

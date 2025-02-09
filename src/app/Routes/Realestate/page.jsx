@@ -13,7 +13,7 @@ export default function RealEstatePage() {
       {/* Hero Section */}
       <section className="bg-blue-900 text-white py-20">
         <div className="container mx-auto text-center" data-aos="fade-up">
-          <h1 className="text-5xl mt-16 font-bold mb-4">
+          <h1 className="text-3xl md:text-5xl mt-16 font-bold mb-4">
             Revolutionize Real Estate with NFC Technology
           </h1>
           <p className="text-xl mb-8">
