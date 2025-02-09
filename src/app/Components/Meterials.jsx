@@ -1,13 +1,12 @@
-// components/NFCMaterials.js
 "use client";
 
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useRouter } from "next/navigation"; // ✅ Correct import for Next.js App Router
+import { useRouter } from "next/navigation";
 
 export default function NFCMaterials() {
-  const router = useRouter(); // ✅ Move useRouter outside useEffect
+  const router = useRouter();
 
   useEffect(() => {
     AOS.init({
@@ -19,33 +18,32 @@ export default function NFCMaterials() {
 
   return (
     <section
-      className="py-12 px-6 md:py-12 md:px-12 bg-gray-900 rounded-xl md:rounded-3xl shadow-2xl mx-4 mt-8 border-2 border-gray-800 transform transition-all hover:shadow-3xl hover:scale-101"
+      className="py-12 px-6 md:py-16 md:px-20 bg-gray-100 rounded-3xl shadow-lg mx-4 mt-8 border border-gray-200"
       id="nfc-materials"
       data-aos="fade-up"
     >
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
           NFC Materials
         </h2>
-        <p className="text-base md:text-lg text-gray-300 mb-8 md:mb-12" data-aos="fade-up" data-aos-delay="100">
-          We offer NFC cards made from different premium materials. Select the one that best suits your business needs.
+        <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-12" data-aos="fade-up" data-aos-delay="100">
+          We offer NFC cards made from different premium materials. Choose the one that best suits your business needs.
         </p>
 
         {/* Card Layout */}
         <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           {/* PVC Card */}
           <div
-            className="w-full sm:w-80 md:w-96 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 border-gray-100"
+            className="w-full sm:w-80 md:w-96 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all border border-gray-300"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div className="relative overflow-hidden rounded-md mb-4">
+            <div className="relative overflow-hidden rounded-lg mb-4">
               <img
                 src="/4.png"
                 alt="PVC Material"
-                className="w-full h-48 md:h-56 object-cover rounded-md hover:scale-110 transition-transform duration-300"
+                className="w-full h-48 md:h-56 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-10 hover:bg-opacity-0 transition-all duration-300"></div>
             </div>
             <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">PVC</h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
@@ -53,26 +51,25 @@ export default function NFCMaterials() {
             </p>
 
             <button
-              onClick={() => router.push("/Routes/Purchase")} // ✅ Now it works correctly
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-2 rounded-md hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105"
+              onClick={() => router.push("/Routes/Purchase")}
+              className="w-full bg-gray-200 border-[1px] border-neutral-400 text-gray-800 px-5 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition-all"
             >
               <b>50 AED</b> - Learn more
             </button>
           </div>
 
-          {/* Platinum Card */}
+          {/* Aluminium Card */}
           <div
-            className="w-full sm:w-80 md:w-96 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 border-gray-100"
+            className="w-full sm:w-80 md:w-96 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all border border-gray-300"
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            <div className="relative overflow-hidden rounded-md mb-4">
+            <div className="relative overflow-hidden rounded-lg mb-4">
               <img
                 src="/3.png"
-                alt="Platinum Material"
-                className="w-full h-48 md:h-56 object-cover rounded-md hover:scale-110 transition-transform duration-300"
+                alt="Aluminium Material"
+                className="w-full h-48 md:h-56 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-10 hover:bg-opacity-0 transition-all duration-300"></div>
             </div>
             <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Aluminium</h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
@@ -80,7 +77,7 @@ export default function NFCMaterials() {
             </p>
             <button
               onClick={() => router.push("/Routes/Purchase")}
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-2 rounded-md hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105"
+              className="w-full bg-gray-200 border-[1px] border-neutral-400 text-gray-800 px-5 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition-all"
             >
               <b>150 AED</b> - Learn more
             </button>
@@ -88,17 +85,16 @@ export default function NFCMaterials() {
 
           {/* Wood Card */}
           <div
-            className="w-full sm:w-80 md:w-96 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border-2 border-gray-100"
+            className="w-full sm:w-80 md:w-96 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all border border-gray-300"
             data-aos="fade-up"
             data-aos-delay="600"
           >
-            <div className="relative overflow-hidden rounded-md mb-4">
+            <div className="relative overflow-hidden rounded-lg mb-4">
               <img
                 src="/2.png"
                 alt="Wood Material"
-                className="w-full h-48 md:h-56 object-cover rounded-md hover:scale-110 transition-transform duration-300"
+                className="w-full h-48 md:h-56 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-10 hover:bg-opacity-0 transition-all duration-300"></div>
             </div>
             <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Wood</h3>
             <p className="text-gray-600 mb-4 text-sm md:text-base">
@@ -106,7 +102,7 @@ export default function NFCMaterials() {
             </p>
             <button
               onClick={() => router.push("/Routes/Purchase")}
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-2 rounded-md hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105"
+              className="w-full bg-gray-200 border-[1px] border-neutral-400 text-gray-800 px-5 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition-all"
             >
               <b>170 AED</b> - Learn more
             </button>
