@@ -46,12 +46,12 @@ export default function Navbar() {
 
         {/* Right: Get in Touch Button (Desktop Only) */}
         <div className="hidden md:block">
-          <Link
-            href="#contact"
+          <a
+            href="https://api.whatsapp.com/send/?phone=971544662800&text&type=phone_number&app_absent=0" target="_blank"
             className="px-4 py-2 bg-teal-600 text-white text-sm font-medium rounded-lg hover:bg-teal-700 transition-all duration-300"
           >
-            Get in Touch
-          </Link>
+            Let's talk
+          </a>
         </div>
       </div>
 
